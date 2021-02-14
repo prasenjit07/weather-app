@@ -20,10 +20,7 @@ import { WeathercomparisonComponent } from './weather/weathercomparison.componen
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // RouterModule.forRoot([
-    //   {path:"/",component:AppComponent},
-    //   {path:"/weathercomponent",component:WeatherComponent}
-    // ])
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
