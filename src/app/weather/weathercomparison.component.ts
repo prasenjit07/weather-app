@@ -8,9 +8,9 @@ import { WeatherService } from './weather.service';
   styleUrls: ['./weathercomparison.component.css']
 })
 export class WeathercomparisonComponent implements OnInit {
+  weather: any;
 
   constructor(private route:ActivatedRoute,private weatherService: WeatherService) { }
-  weather: any;
   errorMessage: string | undefined;
   
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class WeathercomparisonComponent implements OnInit {
     this.weatherService.getForecastWeather(place).subscribe({
       next: weather => {
         this.weather = weather;
-        console.log(this.weather);
+        //console.log(this.weatherForecastData);
       },
       error: err => this.errorMessage = err
     })
